@@ -4,7 +4,7 @@
 /*
  * name: aimi
  * id: zy1706112
- * This program find the shortest distance where cost is no more than 1500
+ * This program find the shortest distance where cost is no more than 1500 using branch and bound
  */
 
 using namespace std;
@@ -25,15 +25,15 @@ void main() {
 	int dist[50][50];
 	memset(vaildDist, -1, sizeof(int) * 50 * 50);
 	ifstream in1, in2;
-	in1.open("D:\\m1.txt", ios::in);
-	in2.open("D:\\m2.txt", ios::in);
+	in1.open("m1.txt", ios::in);
+	in2.open("m2.txt", ios::in);
 	int i, j, t, h, t2;
 	for (i = 0; i < 50; i++) {
 		for (j = 0, h = 0; j < 50; j++) {
 			in1 >> t;
 			in2 >> t2;
 			if (t != 9999) {
-				//*/
+				/*/
 				//22 times faster if no note it, but less precise
 				if (j > i)
 				//*/
